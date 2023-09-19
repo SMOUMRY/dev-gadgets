@@ -102,10 +102,10 @@ function getNextItem(){
 function getPrevItem(){
     document.querySelector('.pictures-prev2').addEventListener('click', function(){
         console.log(carousel[newCounter]);
-        if (newCounter === 0 ) document.querySelector('.pictures-prev2').classList.add("button");
+        if (newCounter === 1 ) document.querySelector('.pictures-prev2').classList.add("button");
         if (carousel[newCounter].classList.contains('similar-item')){
-            carousel[newCounter].classList.add('similar-item');
-            carousel[newCounter - 1].classList.remove('similar-item');
+            carousel[newCounter].classList.remove('similar-item');
+            carousel[newCounter - 1].classList.add('similar-item');
             newCounter--;
         }
     });
