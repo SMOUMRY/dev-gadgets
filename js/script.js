@@ -32,3 +32,17 @@ function getPreviousImg(){
         counter --;
     }
 }
+
+// Survol version desktop
+
+const pictures = document.querySelectorAll(".thumbs-img");
+console.log(pictures);
+
+pictures.forEach(img =>{
+    img.addEventListener('mouseover', function(){
+        console.log("image");
+        picture = document.querySelector(".pictures-img")
+        picture.setAttribute("src", img.dataset.img);
+        console.log(img.dataset.img);
+    })
+})
