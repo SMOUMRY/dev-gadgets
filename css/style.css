@@ -283,11 +283,28 @@ body {
     font-size: 3rem;
     cursor: pointer;
 }
-
+.pictures-handler2 {
+    z-index: 3;
+    position: absolute;
+    top: 1800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    aspect-ratio: 1/1;
+    font-size: 3rem;
+    cursor: pointer;
+}
 .pictures-prev {
     left: 1rem;
 }
 .pictures-next {
+    right: 1rem;
+}
+.pictures-prev2 {
+    left: 1rem;
+}
+.pictures-next2 {
     right: 1rem;
 }
 
@@ -302,6 +319,9 @@ body {
     .pictures-handler {
         display: none;
     }
+    .pictures-handler2{
+    display: none;
+}
     .pictures-img {
         width: 100%;
         aspect-ratio: 1/1;
@@ -336,9 +356,8 @@ body {
     margin: 0 auto;
     overflow: hidden;
 }
-.similar-lst {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.similar-item {
+    display: none;
 }
 .similar-lnk {
     position: relative;
@@ -379,6 +398,13 @@ body {
 @media screen and (min-width: 768px) {
     .similar-lnk:hover {
         background-color: #dddddd;
+    }
+    .similar-lst {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .similar-item {
+        display: grid;
     }
 }
 
@@ -506,4 +532,10 @@ body {
 
 .active{
     display : none;
+}
+
+/* new Button */
+
+.button {
+    display: none;
 }

@@ -1,6 +1,7 @@
 // Carousel
 
 let counter = 1;
+let newCounter = 1;
 
 document.querySelector(".pictures-next").addEventListener("click", function(){
     getNextImg();
@@ -80,8 +81,35 @@ window.addEventListener('load', function () {
         document.querySelector('.product-advantages').classList.toggle("active");
     }
     if (reload2.includes('closed')){
-        console.log(reload2);
         document.querySelector('.number2').classList.toggle("closed");
         document.querySelector('.product-car').classList.toggle("active");
     }
 });
+
+let carousel = document.querySelectorAll('.similar-itm');
+
+function getNextItem(){
+    document.querySelector('.pictures-next2').addEventListener('click', function(){
+        console.log(carousel[newCounter]);
+        if (newCounter === 3 ) document.querySelector('.pictures-next2').classList.add("button");
+        if (carousel[newCounter].classList.contains('similar-item')){
+            carousel[newCounter].classList.remove('similar-item');
+            carousel[newCounter - 1].classList.add('similar-item');
+            newCounter++;
+        }
+    });
+}
+function getPrevItem(){
+    document.querySelector('.pictures-prev2').addEventListener('click', function(){
+        console.log(carousel[newCounter]);
+        if (newCounter === 0 ) document.querySelector('.pictures-prev2').classList.add("button");
+        if (carousel[newCounter].classList.contains('similar-item')){
+            carousel[newCounter].classList.add('similar-item');
+            carousel[newCounter - 1].classList.remove('similar-item');
+            newCounter--;
+        }
+    });
+}
+
+getNextItem();
+getPrevItem();
