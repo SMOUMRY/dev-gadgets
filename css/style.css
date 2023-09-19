@@ -495,3 +495,15 @@ body {
 .legal-lnk {
     color: #fff;
 }
+
+/* Add Cart */
+
+.active-cta{
+    background-color: black !important;
+}
+
+/* Hidden */
+
+.active{
+    display : none;
+}
